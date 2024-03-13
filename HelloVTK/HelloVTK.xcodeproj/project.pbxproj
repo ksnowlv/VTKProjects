@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49DE5D1D2BA0500000F326C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5D1C2BA0500000F326C5 /* main.cpp */; };
+		49DE5D432BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D422BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib */; };
+		49DE5D442BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D422BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib */; };
+		49DE5D462BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D452BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib */; };
+		49DE5D472BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D452BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib */; };
+		49DE5D492BA056E200F326C5 /* libvtksys-9.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D482BA056E200F326C5 /* libvtksys-9.3.dylib */; };
+		49DE5D4A2BA056E200F326C5 /* libvtksys-9.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D482BA056E200F326C5 /* libvtksys-9.3.dylib */; };
+		49DE5D4C2BA0572600F326C5 /* libvtkInteractionWidgets-9.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D4B2BA0572600F326C5 /* libvtkInteractionWidgets-9.3.1.dylib */; };
+		49DE5D4D2BA0572700F326C5 /* libvtkInteractionWidgets-9.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D4B2BA0572600F326C5 /* libvtkInteractionWidgets-9.3.1.dylib */; };
+		49DE5D4F2BA0575900F326C5 /* libvtkRenderingFreeType-9.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D4E2BA0575900F326C5 /* libvtkRenderingFreeType-9.3.1.dylib */; };
+		49DE5D502BA0575A00F326C5 /* libvtkRenderingFreeType-9.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D4E2BA0575900F326C5 /* libvtkRenderingFreeType-9.3.1.dylib */; };
+		49DE5D522BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D512BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib */; };
+		49DE5D532BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D512BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib */; };
+		49DE5D552BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D542BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib */; };
+		49DE5D562BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D542BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib */; };
+		49DE5D582BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D572BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib */; };
+		49DE5D592BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D572BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49DE5D172BA0500000F326C5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		49DE5D272BA0525900F326C5 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49DE5D472BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib in Embed Libraries */,
+				49DE5D502BA0575A00F326C5 /* libvtkRenderingFreeType-9.3.1.dylib in Embed Libraries */,
+				49DE5D592BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib in Embed Libraries */,
+				49DE5D532BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib in Embed Libraries */,
+				49DE5D562BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib in Embed Libraries */,
+				49DE5D442BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib in Embed Libraries */,
+				49DE5D4A2BA056E200F326C5 /* libvtksys-9.3.dylib in Embed Libraries */,
+				49DE5D4D2BA0572700F326C5 /* libvtkInteractionWidgets-9.3.1.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		49DE5D192BA0500000F326C5 /* HelloVTK */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloVTK; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DE5D1C2BA0500000F326C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		49DE5D422BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonCore-9.3.1.dylib"; path = "../../../../../../usr/local/lib/libvtkCommonCore-9.3.1.dylib"; sourceTree = "<group>"; };
+		49DE5D452BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonExecutionModel-9.3.1.dylib"; path = "../../../../../../usr/local/lib/libvtkCommonExecutionModel-9.3.1.dylib"; sourceTree = "<group>"; };
+		49DE5D482BA056E200F326C5 /* libvtksys-9.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtksys-9.3.dylib"; path = "../../../../../../usr/local/lib/libvtksys-9.3.dylib"; sourceTree = "<group>"; };
+		49DE5D4B2BA0572600F326C5 /* libvtkInteractionWidgets-9.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionWidgets-9.3.1.dylib"; path = "../../../../../../usr/local/lib/libvtkInteractionWidgets-9.3.1.dylib"; sourceTree = "<group>"; };
+		49DE5D4E2BA0575900F326C5 /* libvtkRenderingFreeType-9.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingFreeType-9.3.1.dylib"; path = "../../../../../../usr/local/lib/libvtkRenderingFreeType-9.3.1.dylib"; sourceTree = "<group>"; };
+		49DE5D512BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingCore-9.3.1.dylib"; path = "../../../../../../usr/local/lib/libvtkRenderingCore-9.3.1.dylib"; sourceTree = "<group>"; };
+		49DE5D542BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingOpenGL2-9.3.dylib"; path = "../../../../../../usr/local/lib/libvtkRenderingOpenGL2-9.3.dylib"; sourceTree = "<group>"; };
+		49DE5D572BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSources-9.3.1.dylib"; path = "../../../../../../usr/local/lib/libvtkFiltersSources-9.3.1.dylib"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49DE5D162BA0500000F326C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DE5D4F2BA0575900F326C5 /* libvtkRenderingFreeType-9.3.1.dylib in Frameworks */,
+				49DE5D492BA056E200F326C5 /* libvtksys-9.3.dylib in Frameworks */,
+				49DE5D582BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib in Frameworks */,
+				49DE5D522BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib in Frameworks */,
+				49DE5D552BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib in Frameworks */,
+				49DE5D462BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib in Frameworks */,
+				49DE5D432BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib in Frameworks */,
+				49DE5D4C2BA0572600F326C5 /* libvtkInteractionWidgets-9.3.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49DE5D102BA0500000F326C5 = {
+			isa = PBXGroup;
+			children = (
+				49DE5D1B2BA0500000F326C5 /* HelloVTK */,
+				49DE5D1A2BA0500000F326C5 /* Products */,
+				49DE5D232BA0525900F326C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		49DE5D1A2BA0500000F326C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49DE5D192BA0500000F326C5 /* HelloVTK */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49DE5D1B2BA0500000F326C5 /* HelloVTK */ = {
+			isa = PBXGroup;
+			children = (
+				49DE5D1C2BA0500000F326C5 /* main.cpp */,
+			);
+			path = HelloVTK;
+			sourceTree = "<group>";
+		};
+		49DE5D232BA0525900F326C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49DE5D572BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib */,
+				49DE5D542BA057AB00F326C5 /* libvtkRenderingOpenGL2-9.3.dylib */,
+				49DE5D512BA0577D00F326C5 /* libvtkRenderingCore-9.3.1.dylib */,
+				49DE5D4E2BA0575900F326C5 /* libvtkRenderingFreeType-9.3.1.dylib */,
+				49DE5D4B2BA0572600F326C5 /* libvtkInteractionWidgets-9.3.1.dylib */,
+				49DE5D482BA056E200F326C5 /* libvtksys-9.3.dylib */,
+				49DE5D452BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib */,
+				49DE5D422BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49DE5D182BA0500000F326C5 /* HelloVTK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49DE5D202BA0500000F326C5 /* Build configuration list for PBXNativeTarget "HelloVTK" */;
+			buildPhases = (
+				49DE5D152BA0500000F326C5 /* Sources */,
+				49DE5D162BA0500000F326C5 /* Frameworks */,
+				49DE5D172BA0500000F326C5 /* CopyFiles */,
+				49DE5D272BA0525900F326C5 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloVTK;
+			productName = HelloVTK;
+			productReference = 49DE5D192BA0500000F326C5 /* HelloVTK */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49DE5D112BA0500000F326C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					49DE5D182BA0500000F326C5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 49DE5D142BA0500000F326C5 /* Build configuration list for PBXProject "HelloVTK" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49DE5D102BA0500000F326C5;
+			productRefGroup = 49DE5D1A2BA0500000F326C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49DE5D182BA0500000F326C5 /* HelloVTK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49DE5D152BA0500000F326C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DE5D1D2BA0500000F326C5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		49DE5D1E2BA0500000F326C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		49DE5D1F2BA0500000F326C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		49DE5D212BA0500000F326C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "/usr/local/include/vtk-9.3";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		49DE5D222BA0500000F326C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "/usr/local/include/vtk-9.3";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49DE5D142BA0500000F326C5 /* Build configuration list for PBXProject "HelloVTK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DE5D1E2BA0500000F326C5 /* Debug */,
+				49DE5D1F2BA0500000F326C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49DE5D202BA0500000F326C5 /* Build configuration list for PBXNativeTarget "HelloVTK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49DE5D212BA0500000F326C5 /* Debug */,
+				49DE5D222BA0500000F326C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49DE5D112BA0500000F326C5 /* Project object */;
+}
