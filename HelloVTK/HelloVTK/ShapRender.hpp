@@ -18,10 +18,20 @@ public:
     ~ShapeRender();
     
 public:
+    //圆柱
     void CylinderRender();
+    //正方体
     void CubeRender();
+    //直线
     void LineRender();
+    //折线
     void PolyLineRender();
+    //三角形
+    void TriangleRender();
+    //正方形
+    void SquareRender();
+    //圆锥
+    void ConeRender();
     
 private:
     void VTKRender(vtkProp* actor);

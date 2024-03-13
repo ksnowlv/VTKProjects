@@ -16,7 +16,10 @@ int main() {
     //render->CylinderRender();
     //render->CubeRenderWithImageCode();
     //render->LineRender();
-    render->PolyLineRender();
+    //render->PolyLineRender();
+    //render->TriangleRender();
+   // render->SquareRender();
+    render->ConeRender();
     
 
     
