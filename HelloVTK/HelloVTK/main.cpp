@@ -19,7 +19,8 @@ int main() {
     //render->PolyLineRender();
     //render->TriangleRender();
    // render->SquareRender();
-    render->ConeRender();
+    //render->ConeRender();
+    render->SphereRender();
     
 
     

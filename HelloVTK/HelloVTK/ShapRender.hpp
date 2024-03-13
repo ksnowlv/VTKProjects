@@ -32,6 +32,8 @@ public:
     void SquareRender();
     //圆锥
     void ConeRender();
+    //球体
+    void SphereRender();
     
 private:
     void VTKRender(vtkProp* actor);

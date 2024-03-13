@@ -41,6 +41,9 @@
 //
 #include <vtkConeSource.h>
 
+//
+#include <vtkSphereSource.h>
+
 ShapeRender::ShapeRender() {
     
 }
@@ -268,6 +271,25 @@ void ShapeRender::ConeRender() {
     actor->SetMapper(mapper);
     actor->GetProperty()->SetColor(1.0, 0.0, 1.0);  // 设置颜色为紫色
     VTKRender(actor);
+}
+
+void ShapeRender::SphereRender() {
+    // 创建球体对象
+    vtkSmartPointer<vtkSphereSource> sphere = vtkSmartPointer<vtkSphereSource>::New();
+    sphere->SetThetaResolution(40);
+    sphere->SetPhiResolution(40);
+    
+    // 创建 Mapper
+    vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+    mapper->SetInputConnection(sphere->GetOutputPort());
+
+    // 创建 Actor
+    vtkSmartPointer<vtkActor> actor = vtkSmartPointer<vtkActor>::New();
+    actor->SetMapper(mapper);
+    actor->GetProperty()->SetColor(1.0, 0.0, 1.0);  // 设置颜色为紫色
+    
+    VTKRender(actor);
+    
 }
 
 
