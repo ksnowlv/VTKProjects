@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		491C6C7A2BA14BA300C77A61 /* libvtkIOImage-9.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C6C792BA14BA300C77A61 /* libvtkIOImage-9.3.dylib */; };
 		491C6C9F2BA161DE00C77A61 /* ShapRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 491C6C9D2BA161DE00C77A61 /* ShapRender.cpp */; };
-		491C6CA02BA16E7700C77A61 /* flutter.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 491C6C9B2BA15E5D00C77A61 /* flutter.jpg */; };
-		491C6CA12BA16E7700C77A61 /* flutter.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 491C6C9C2BA15E5D00C77A61 /* flutter.png */; };
 		491C6CA42BA1841700C77A61 /* libvtkCommonDataModel-9.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C6CA32BA1841700C77A61 /* libvtkCommonDataModel-9.3.dylib */; };
 		491C6CA62BA184D500C77A61 /* libvtkCommonDataModel-9.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 491C6CA32BA1841700C77A61 /* libvtkCommonDataModel-9.3.dylib */; };
 		491C6CA72BA184DB00C77A61 /* libvtkIOImage-9.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 491C6C792BA14BA300C77A61 /* libvtkIOImage-9.3.dylib */; };
+		491C6CAA2BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C6CA92BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib */; };
+		491C6CAB2BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 491C6CA92BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib */; };
+		491C6CAE2BA2889200C77A61 /* flutter_dart.png in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 491C6CA82BA284E600C77A61 /* flutter_dart.png */; };
+		491C6CB12BA2891400C77A61 /* flutter.jpg in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 491C6C9B2BA15E5D00C77A61 /* flutter.jpg */; };
+		491C6CB22BA2891400C77A61 /* flutter.png in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 491C6C9C2BA15E5D00C77A61 /* flutter.png */; };
+		491C6CB52BA299BC00C77A61 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 491C6CB32BA299BC00C77A61 /* Logger.cpp */; };
+		491C6CB72BA2EDF100C77A61 /* libvtkCommonColor-9.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C6CB62BA2EDF100C77A61 /* libvtkCommonColor-9.3.dylib */; };
+		491C6CB92BA2EEB800C77A61 /* libvtkFiltersHybrid-9.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C6CB82BA2EEB800C77A61 /* libvtkFiltersHybrid-9.3.dylib */; };
 		49DE5D1D2BA0500000F326C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DE5D1C2BA0500000F326C5 /* main.cpp */; };
 		49DE5D432BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE5D422BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib */; };
 		49DE5D442BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 49DE5D422BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib */; };
@@ -40,8 +46,6 @@
 			dstPath = /usr/share/man/man;
 			dstSubfolderSpec = 0;
 			files = (
-				491C6CA02BA16E7700C77A61 /* flutter.jpg in CopyFiles */,
-				491C6CA12BA16E7700C77A61 /* flutter.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -51,6 +55,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				491C6CB12BA2891400C77A61 /* flutter.jpg in Embed Libraries */,
+				491C6CB22BA2891400C77A61 /* flutter.png in Embed Libraries */,
+				491C6CAE2BA2889200C77A61 /* flutter_dart.png in Embed Libraries */,
 				49DE5D472BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib in Embed Libraries */,
 				49DE5D502BA0575A00F326C5 /* libvtkRenderingFreeType-9.3.1.dylib in Embed Libraries */,
 				49DE5D592BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib in Embed Libraries */,
@@ -61,6 +68,7 @@
 				491C6CA72BA184DB00C77A61 /* libvtkIOImage-9.3.dylib in Embed Libraries */,
 				49DE5D4A2BA056E200F326C5 /* libvtksys-9.3.dylib in Embed Libraries */,
 				49DE5D4D2BA0572700F326C5 /* libvtkInteractionWidgets-9.3.1.dylib in Embed Libraries */,
+				491C6CAB2BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +82,12 @@
 		491C6C9D2BA161DE00C77A61 /* ShapRender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShapRender.cpp; sourceTree = "<group>"; };
 		491C6C9E2BA161DE00C77A61 /* ShapRender.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShapRender.hpp; sourceTree = "<group>"; };
 		491C6CA32BA1841700C77A61 /* libvtkCommonDataModel-9.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonDataModel-9.3.dylib"; path = "../../../../../usr/local/lib/libvtkCommonDataModel-9.3.dylib"; sourceTree = "<group>"; };
+		491C6CA82BA284E600C77A61 /* flutter_dart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flutter_dart.png; sourceTree = "<group>"; };
+		491C6CA92BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersTexture-9.3.dylib"; path = "../../../../../usr/local/lib/libvtkFiltersTexture-9.3.dylib"; sourceTree = "<group>"; };
+		491C6CB32BA299BC00C77A61 /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		491C6CB42BA299BC00C77A61 /* Logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
+		491C6CB62BA2EDF100C77A61 /* libvtkCommonColor-9.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libvtkCommonColor-9.3.dylib"; sourceTree = "<group>"; };
+		491C6CB82BA2EEB800C77A61 /* libvtkFiltersHybrid-9.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libvtkFiltersHybrid-9.3.dylib"; sourceTree = "<group>"; };
 		49DE5D192BA0500000F326C5 /* HelloVTK */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloVTK; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DE5D1C2BA0500000F326C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		49DE5D422BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonCore-9.3.1.dylib"; path = "../../../../../../usr/local/lib/libvtkCommonCore-9.3.1.dylib"; sourceTree = "<group>"; };
@@ -91,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491C6CB92BA2EEB800C77A61 /* libvtkFiltersHybrid-9.3.dylib in Frameworks */,
 				491C6CA42BA1841700C77A61 /* libvtkCommonDataModel-9.3.dylib in Frameworks */,
 				491C6C7A2BA14BA300C77A61 /* libvtkIOImage-9.3.dylib in Frameworks */,
 				49DE5D4F2BA0575900F326C5 /* libvtkRenderingFreeType-9.3.1.dylib in Frameworks */,
@@ -101,6 +116,8 @@
 				49DE5D462BA0567A00F326C5 /* libvtkCommonExecutionModel-9.3.1.dylib in Frameworks */,
 				49DE5D432BA055EB00F326C5 /* libvtkCommonCore-9.3.1.dylib in Frameworks */,
 				49DE5D4C2BA0572600F326C5 /* libvtkInteractionWidgets-9.3.1.dylib in Frameworks */,
+				491C6CB72BA2EDF100C77A61 /* libvtkCommonColor-9.3.dylib in Frameworks */,
+				491C6CAA2BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +127,7 @@
 		491C6C9A2BA15E5D00C77A61 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				491C6CA82BA284E600C77A61 /* flutter_dart.png */,
 				491C6C9B2BA15E5D00C77A61 /* flutter.jpg */,
 				491C6C9C2BA15E5D00C77A61 /* flutter.png */,
 			);
@@ -140,6 +158,8 @@
 				49DE5D1C2BA0500000F326C5 /* main.cpp */,
 				491C6C9D2BA161DE00C77A61 /* ShapRender.cpp */,
 				491C6C9E2BA161DE00C77A61 /* ShapRender.hpp */,
+				491C6CB32BA299BC00C77A61 /* Logger.cpp */,
+				491C6CB42BA299BC00C77A61 /* Logger.hpp */,
 			);
 			path = HelloVTK;
 			sourceTree = "<group>";
@@ -147,6 +167,9 @@
 		49DE5D232BA0525900F326C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				491C6CB82BA2EEB800C77A61 /* libvtkFiltersHybrid-9.3.dylib */,
+				491C6CB62BA2EDF100C77A61 /* libvtkCommonColor-9.3.dylib */,
+				491C6CA92BA287C700C77A61 /* libvtkFiltersTexture-9.3.dylib */,
 				491C6CA32BA1841700C77A61 /* libvtkCommonDataModel-9.3.dylib */,
 				491C6C792BA14BA300C77A61 /* libvtkIOImage-9.3.dylib */,
 				49DE5D572BA057EC00F326C5 /* libvtkFiltersSources-9.3.1.dylib */,
@@ -220,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49DE5D1D2BA0500000F326C5 /* main.cpp in Sources */,
+				491C6CB52BA299BC00C77A61 /* Logger.cpp in Sources */,
 				491C6C9F2BA161DE00C77A61 /* ShapRender.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +374,10 @@
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "/usr/local/include/vtk-9.3";
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -364,7 +391,10 @@
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "/usr/local/include/vtk-9.3";
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

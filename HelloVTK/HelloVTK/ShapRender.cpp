@@ -43,9 +43,24 @@
 
 //
 #include <vtkSphereSource.h>
+#include <vtkPTextureMapToSphere.h>
+
+//
+#include <vtkTextProperty.h>
+#include <vtkTextActor.h>
+
+//
+
+#include <vtkCallbackCommand.h>
+
+//
+#include <vtkEarthSource.h>
+#include <vtkNamedColors.h>
+#include <vtkImageData.h>
+
 
 ShapeRender::ShapeRender() {
-    
+    init();
 }
 
 ShapeRender::~ShapeRender() {
@@ -73,8 +88,8 @@ void ShapeRender::CylinderRender() {
     
 }
 
-const std::string jpgImagePath = "Resource/flutter.jpg";
-const std::string pngimagePath = "Resource/flutter.png";
+const std::string jpgImagePath = "flutter.jpg";
+const std::string pngimagePath = "flutter.png";
 
 
 void ShapeRender::CubeRender() {
@@ -275,23 +290,156 @@ void ShapeRender::ConeRender() {
 
 void ShapeRender::SphereRender() {
     // 创建球体对象
-    vtkSmartPointer<vtkSphereSource> sphere = vtkSmartPointer<vtkSphereSource>::New();
-    sphere->SetThetaResolution(40);
-    sphere->SetPhiResolution(40);
+    vtkSmartPointer<vtkSphereSource> sphereSource = vtkSmartPointer<vtkSphereSource>::New();
+    sphereSource->SetThetaResolution(50);
+    sphereSource->SetPhiResolution(50);
+    sphereSource->SetRadius(10);
+    
+    
+    //球面纹理
+    vtkSmartPointer<vtkTextureMapToSphere> textureMapToSphere = vtkSmartPointer<vtkTextureMapToSphere>::New();
+    textureMapToSphere->SetInputConnection(sphereSource->GetOutputPort());
+    
     
     // 创建 Mapper
     vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
-    mapper->SetInputConnection(sphere->GetOutputPort());
-
+    mapper->SetInputConnection(textureMapToSphere->GetOutputPort());
+    
+    
     // 创建 Actor
     vtkSmartPointer<vtkActor> actor = vtkSmartPointer<vtkActor>::New();
     actor->SetMapper(mapper);
+    actor->SetTexture(m_texture);
     actor->GetProperty()->SetColor(1.0, 0.0, 1.0);  // 设置颜色为紫色
     
     VTKRender(actor);
-    
 }
 
+void ShapeRender::TextRender() {
+    
+    // 创建文字属性
+    vtkSmartPointer<vtkTextProperty> textProperty = vtkSmartPointer<vtkTextProperty>::New();
+    textProperty->SetColor(1.0, 0.0, 1.0);  // 设置文字颜色为紫色
+    textProperty->SetFontSize(24);  // 设置字号大小
+    textProperty->SetJustificationToCentered();  // 设置文字居中显示
+    
+    // 创建文字对象
+    vtkSmartPointer<vtkTextActor> textActor = vtkSmartPointer<vtkTextActor>::New();
+    textActor->SetInput("Hello, VTK!");  // 设置文字内容
+    textActor->SetTextProperty(textProperty);
+    
+    textActor->SetPosition(600, 400);  // 设置文字位置屏幕居中
+    
+    VTKRender(textActor);
+}
+
+// 回调函数
+void ButtonCallbackFunction(vtkObject* caller, long unsigned int eventId, void* clientData, void* callData)
+{
+    std::cout << "Button clicked!" << std::endl;
+}
+
+
+void ShapeRender::ButtonRender() {
+    //VTK 中，没有直接的按钮控件，但是你可以创建一个类似按钮的交互式控件；
+    //像vtkTextActor，然后在交互器通过vtkCallbackCommand接收事件
+    
+    // 创建文字属性
+    vtkSmartPointer<vtkTextProperty> textProperty = vtkSmartPointer<vtkTextProperty>::New();
+    textProperty->SetColor(1.0, 1.0, 1.0);  // 设置文字颜色为白色
+    textProperty->SetFontSize(24);  // 设置字号大小
+    textProperty->SetJustificationToCentered();  // 设置文字居中显示
+    
+    // 创建按钮文字对象
+    vtkSmartPointer<vtkTextActor> buttonActor = vtkSmartPointer<vtkTextActor>::New();
+    buttonActor->SetInput("Click Me! Test Button Event");  // 设置按钮文字
+    buttonActor->SetTextProperty(textProperty);
+    // 设置按钮位置
+    buttonActor->GetPositionCoordinate()->SetCoordinateSystemToNormalizedDisplay();
+    buttonActor->GetPositionCoordinate()->SetValue(0.5, 0.5);
+    // 设置按钮颜色
+    //buttonActor->GetTextProperty()->SetColor(.0, 0.0, 0.0);  // 设置文字颜色为黑色
+    
+    
+    vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
+    // 将按钮文字对象添加到渲染器中
+    renderer->AddActor(buttonActor);
+    renderer->SetBackground(0.6, 0.2, 0.4);
+    
+    // 创建渲染窗口
+    vtkSmartPointer<vtkRenderWindow> renderWindow = vtkSmartPointer<vtkRenderWindow>::New();
+    renderWindow->AddRenderer(renderer);
+    renderWindow->SetSize(1200, 800);
+    renderWindow->SetPosition(100, 300);
+    
+    // 创建交互器
+    vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
+    renderWindowInteractor->SetRenderWindow(renderWindow);
+    
+    // 创建回调命令并绑定到交互器上
+    vtkSmartPointer<vtkCallbackCommand> buttonCallback = vtkSmartPointer<vtkCallbackCommand>::New();
+    buttonCallback->SetCallback(ButtonCallbackFunction);
+    renderWindowInteractor->AddObserver(vtkCommand::LeftButtonPressEvent, buttonCallback);
+    
+    // 开始渲染
+    renderWindow->Render();
+    renderWindowInteractor->Start();
+}
+
+void ShapeRender::EarthRender() {
+    
+    vtkSmartPointer<vtkNamedColors> colors = vtkSmartPointer<vtkNamedColors>::New();
+    //Earth source
+    vtkSmartPointer<vtkEarthSource> earthSource = vtkSmartPointer<vtkEarthSource>::New();
+    
+    earthSource->OutlineOn();
+    earthSource->Update();
+    
+    // Create a sphere
+    vtkSmartPointer<vtkSphereSource> sphere = vtkSmartPointer<vtkSphereSource>::New();
+    sphere->SetThetaResolution(100);
+    sphere->SetPhiResolution(100);
+    sphere->SetRadius(earthSource->GetRadius());
+    
+    // Create a mapper and actor
+    vtkSmartPointer<vtkPolyDataMapper> mapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+    mapper->SetInputConnection(earthSource->GetOutputPort());
+    
+    //球页
+    vtkSmartPointer<vtkActor> actor = vtkSmartPointer<vtkActor>::New();
+    actor->SetMapper(mapper);
+    actor->GetProperty()->SetColor(colors->GetColor3d("Black").GetData());
+    
+    
+    vtkSmartPointer<vtkPolyDataMapper> sphereMapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+    sphereMapper->SetInputConnection(sphere->GetOutputPort());
+    //球体
+    vtkSmartPointer<vtkActor> sphereActor = vtkSmartPointer<vtkActor>::New();
+    sphereActor->SetMapper(sphereMapper);
+    sphereActor->GetProperty()->SetColor(
+                                         colors->GetColor3d("PeachPuff").GetData());
+    
+    // 创建渲染器
+    vtkSmartPointer<vtkRenderer> renderer =  vtkSmartPointer<vtkRenderer>::New();
+    renderer->AddActor(actor);
+    renderer->AddActor(sphereActor);
+    renderer->SetBackground(0.6, 0.2, 0.4);
+    
+    // 创建渲染窗口
+    vtkSmartPointer<vtkRenderWindow> renderWindow = vtkSmartPointer<vtkRenderWindow>::New();
+    renderWindow->AddRenderer(renderer);
+    renderWindow->SetSize(1200, 800);
+    renderWindow->SetPosition(100, 300);
+    renderWindow->Render();
+    renderWindow->SetWindowName("EarthSource");
+    
+    
+    // 创建交互器
+    vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =  vtkSmartPointer<vtkRenderWindowInteractor>::New();
+    renderWindowInteractor->SetRenderWindow(renderWindow);
+    renderWindowInteractor->Start();
+    
+}
 
 void ShapeRender::VTKRender(vtkProp* actor) {
     // 创建渲染器
@@ -316,6 +464,15 @@ void ShapeRender::VTKRender(vtkProp* actor) {
     
     // 开始交互
     renderWindowInteractor->Start();
+}
+
+void ShapeRender::init() {
+    // 创建png图片纹理
+    vtkSmartPointer<vtkPNGReader> pngReader = vtkSmartPointer<vtkPNGReader>::New();
+    pngReader->SetFileName("flutter_dart.png");
+    
+    m_texture = vtkSmartPointer<vtkTexture>::New();
+    m_texture->SetInputConnection(pngReader->GetOutputPort());
 }
 
 

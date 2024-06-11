@@ -9,8 +9,10 @@
 #define ShapRender_hpp
 
 #include <stdio.h>
+#include <vtkSmartPointer.h>
 
 class vtkProp;
+class vtkTexture;
 
 class ShapeRender {
 public:
@@ -18,25 +20,36 @@ public:
     ~ShapeRender();
     
 public:
-    //圆柱
+    //圆柱渲染
     void CylinderRender();
-    //正方体
+    //正方体渲染
     void CubeRender();
-    //直线
+    //直线渲染
     void LineRender();
-    //折线
+    //折线渲染
     void PolyLineRender();
-    //三角形
+    //三角形渲染
     void TriangleRender();
-    //正方形
+    //正方形渲染
     void SquareRender();
-    //圆锥
+    //圆锥渲染
     void ConeRender();
-    //球体
+    //球体渲染
     void SphereRender();
+    //文本渲染
+    void TextRender();
+    //按钮渲染
+    void ButtonRender();
+    //地球渲染
+    void EarthRender();
     
 private:
+    //VTK渲染
     void VTKRender(vtkProp* actor);
+    void init();
+    
+private:
+    vtkSmartPointer<vtkTexture> m_texture;
     
 };
 
